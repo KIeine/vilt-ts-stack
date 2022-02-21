@@ -2,7 +2,7 @@ import { createApp, h } from 'vue';
 import { createInertiaApp, Link, Head } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
 
-import './assets/tailwind.css';
+import './assets/main.css';
 
 import DefaultLayout from './layouts/DefaultLayout.vue';
 
