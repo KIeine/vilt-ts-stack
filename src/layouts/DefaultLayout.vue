@@ -1,5 +1,5 @@
 <script lang="ts" setup name="DefaultLayout">
-import Home from '../pages/Home.vue';
+import Home from '@/pages/Home.vue';
 </script>
 
 <template>
