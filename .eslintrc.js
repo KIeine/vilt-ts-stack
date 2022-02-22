@@ -16,7 +16,7 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module',
   },
-  plugins: ['vue'],
+  plugins: ['vue', '@typescript-eslint'],
   rules: {
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
