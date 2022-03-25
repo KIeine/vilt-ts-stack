@@ -1,7 +1,7 @@
 {
   "defineProps": {
     "prefix": "defineProps",
-    "body": ["const props = defineProps<{$0}>();"],
+    "body": ["const { $1 } = defineProps<{$1:$0}>();"],
     "description": "defines props"
   },
   "defineEmits": {
