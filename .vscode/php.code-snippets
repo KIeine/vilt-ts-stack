@@ -1,0 +1,7 @@
+{
+  "Route::middleware": {
+    "prefix": "Route::middleware",
+    "body": ["Route::middleware('$1')->group(function () {", "$0", "});"],
+    "description": "shortcut for route middleware"
+  }
+}
