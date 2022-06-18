@@ -5,22 +5,20 @@ module.exports = {
     es6: true,
   },
   extends: [
-    'plugin:prettier/recommended',
     'plugin:vue/vue3-essential',
-    '@vue/eslint-config-typescript/recommended',
-    '@vue/eslint-config-prettier',
-    'prettier/@typescript-eslint',
+    'prettier',
+    'plugin:@typescript-eslint/eslint-recommended',
   ],
   parserOptions: {
-    parser: '@typescript-eslint/parser',
+    parser: { ts: '@typescript-eslint/parser' },
     ecmaVersion: 13,
     sourceType: 'module',
   },
-  plugins: ['vue', '@typescript-eslint'],
+  plugins: ['@typescript-eslint'],
   rules: {
-    'import/prefer-default-export': 'off',
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'import/extensions': ['error', 'ignorePackages'],
+    // 'import/prefer-default-export': 'off',
+    // 'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    // 'import/extensions': ['error', 'ignorePackages'],
     'no-unused-vars': 'warn',
   },
-};
+}
