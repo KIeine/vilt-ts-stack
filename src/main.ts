@@ -1,22 +1,22 @@
-import { createApp, h } from 'vue';
-import { createInertiaApp, Link, Head } from '@inertiajs/inertia-vue3';
-import { InertiaProgress } from '@inertiajs/progress';
+import { createApp, h } from 'vue'
+import { createInertiaApp, Link, Head } from '@inertiajs/inertia-vue3'
+import { InertiaProgress } from '@inertiajs/progress'
 
-import './assets/main.css';
+import './assets/main.css'
 
-import DefaultLayout from './layouts/DefaultLayout.vue';
+import DefaultLayout from './layouts/DefaultLayout.vue'
 
 declare global {
   interface Window {
-    route?: any;
+    route?: any
   }
 }
 
 createInertiaApp({
   resolve: async (name) => {
-    const page = (await import(`./pages/${name}.vue`)).default;
-    page.layout = page.layout === undefined ? DefaultLayout : page.layout;
-    return page;
+    const page = (await import(`./pages/${name}.vue`)).default
+    page.layout = page.layout === undefined ? DefaultLayout : page.layout
+    return page
   },
   setup({ el, app, props, plugin }) {
     createApp({ render: () => h(app, props) })
@@ -26,8 +26,8 @@ createInertiaApp({
       // inertia
       .component('InertiaLink', Link)
       .component('InertiaHead', Head)
-      .mount(el);
+      .mount(el)
   },
-});
+})
 
-InertiaProgress.init();
+InertiaProgress.init()
